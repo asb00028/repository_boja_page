@@ -28,11 +28,3 @@ jobs:
 
       - name: Ejecutar script BOJA
         run: python actualizar_boja.py
-
-      - name: Commit y push
-        run: |
-          git config --local user.name "github-actions[bot]"
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git add sumario.txt
-          git commit -m "Actualizar sumario BOJA [Automático]" || echo "No hay cambios"
-          git push
